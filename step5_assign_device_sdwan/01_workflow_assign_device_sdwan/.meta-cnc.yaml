@@ -1,0 +1,40 @@
+# demo workflow for device uplink values
+
+name: sdwan_onboard_device_eccc13ae-d711-4dbf-af19-0c10d26e3633
+
+label: Step 5 - onboard device to sdwan workflow
+description: onboard device to panorama and associated to a topo template
+
+type: workflow
+
+labels:
+  collection:
+    - SD-WAN
+
+variables:
+  - name: TARGET_IP
+    description: Panorama IP
+    default: 0.0.0.0
+    type_hint: fqdn_or_ip
+  - name: TARGET_PORT
+    description: Panorama port
+    default: 443
+    type_hint: number
+  - name: TARGET_USERNAME
+    description: Username
+    default: admin
+    type_hint: text
+  - name: TARGET_PASSWORD
+    description: Password
+    default: admin
+    type_hint: password
+
+snippets:
+# workflow stages
+# get device list
+  - name: get_device_list_eccc13ae-d711-4dbf-af19-0c10d26e3627
+# initial dg and stack assignment with interface types
+  - name: panorama_onboard_device_sdwan_eccc13ae-d711-4dbf-af19-0c10d26e3633
+# last page output review
+  - name: onboard_sdwan_last_page_eccc13ae-d711-4dbf-af19-0c10d26e3633
+

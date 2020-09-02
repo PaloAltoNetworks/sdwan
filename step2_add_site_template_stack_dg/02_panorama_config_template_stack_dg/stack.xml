@@ -1,0 +1,9 @@
+<entry name="{{ sdwan_stack }}">
+  <templates>
+    <member>{{ sdwan_template }}</member>
+    {%- if add_ironskillet == 'yes' %}
+    <member>iron-skillet</member>
+    {% endif %}
+  </templates>
+  <description>{{ sdwan_stack_desc }}</description>
+</entry>

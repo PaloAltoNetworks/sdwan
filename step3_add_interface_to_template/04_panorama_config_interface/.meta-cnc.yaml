@@ -1,0 +1,96 @@
+# add interface to template
+
+name: sdwan_panorama_add_intf_to_template_97b5e00a-7d8e-4203-b5ec-3d3c6a11244b
+
+label: SD-WAN add interface to existing template
+description: SD-WAN add interface to existing template for varying topologies
+
+type: panorama
+
+labels:
+  collection:
+    - lib
+
+variables:
+  - name: sdwan_template
+    description: template name for sd-wan
+    default: SD-WAN_Hub
+    type_hint: disabled
+  - name: phy_interface
+    description: physical interface to add to the template
+    default: ethernet1/1
+    type_hint: text
+  - name: interface_type
+    description: set inteface type; static will use panorama template variables
+    default: static
+    type_hint: dropdown
+    dd_list:
+      - key: dhcp-client
+        value: dhcp-client
+      - key: static
+        value: static
+  - name: interface_ip_var_name
+    description: panorama variable name for the added static interface
+    default: $ethernet_11_addr
+    type_hint: text
+    help_text: must start with $
+    toggle_hint:
+      source: interface_type
+      value: static
+  - name: next_hop_var_name
+    description: panorama variable name for the next hop gateway
+    default: $ethernet_11_nexthop
+    type_hint: text
+    help_text: must start with $
+    toggle_hint:
+      source: interface_type
+      value: static
+  - name: phy_interface_description
+    description: physical interface description
+    default: link to internet
+    type_hint: text
+  - name: zone_name
+    description: zone assignment for new interface
+    default: zone-internet
+    type_hint: dropdown
+    source: zone_names
+  - name: virtual_router
+    description: virtual_router assignment for new interface
+    default: default
+    type_hint: dropdown
+    source: virtual_router_names
+  - name: sdwan_intf_num
+    description: suffix number used for the sdwawn interface
+    default: 1
+    type_hint: number
+    help_text: number only; shows up in the configuration as sdwan.1, sdwan.2
+  - name: sdwan_intf_profile
+    description: sdwan virtual interface traffic profile
+    default: Ethernet
+    type_hint: dropdown
+    source: sdwan_intf_profile_names
+
+snippets:
+  - name: phy_intf_ipaddr_var
+    xpath: /config/devices/entry[@name="localhost.localdomain"]/template/entry[@name="{{ sdwan_template }}"]/variable
+    file: template_var.xml
+    when: interface_type == 'static'
+  - name: interface_phy
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='{{ sdwan_template }}']/config/devices/entry[@name='localhost.localdomain']/network/interface
+    file: interface_phy.xml
+  - name: import_interface
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='{{ sdwan_template }}']/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/import/network/interface
+    file: import_interface.xml
+  - name: add_interface_to_zone
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='{{ sdwan_template }}']/config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone
+    file: zone.xml
+  - name: interface_phy_sdwan_enable
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='{{ sdwan_template }}']/config/devices/entry[@name='localhost.localdomain']/network/interface
+    file: interface_phy_sdwan_enable.xml
+  - name: interface_sdwan
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='{{ sdwan_template }}']/config/devices/entry[@name='localhost.localdomain']/network/interface
+    file: interface_sdwan.xml
+  - name: virtual_router
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template/entry[@name='{{ sdwan_template }}']/config/devices/entry[@name='localhost.localdomain']/network/virtual-router
+    file: virtual_router.xml
+

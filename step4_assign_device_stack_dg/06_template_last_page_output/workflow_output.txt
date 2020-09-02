@@ -1,0 +1,9 @@
+Onboard device to Panorama workflow is complete
+
+Device {{ serial_number }} has been added to panorama and assigned to
+
+Template stack: {{ sdwan_device_stack }}
+Device-group: {{ sdwan_device_dg }}
+
+Interface associations including variable values where applicable
+

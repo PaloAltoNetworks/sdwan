@@ -1,0 +1,88 @@
+# stage 1 base configuration for SD-WAN in Panorama
+# this is the prelude to plug-in configurations
+
+# snippet folder name
+name: panorama_onboard_device_sdwan_eccc13ae-d711-4dbf-af19-0c10d26e3633
+# label used for menu selection
+label: onboard devices to sdwan plugin
+description: Onboard individual devices as hub or branch type
+# type of device configuration
+type: panorama
+
+# grouping of like snippets for dynamic menu creation in pan-cnc
+labels:
+  collection:
+    - lib
+
+# variables used in the configuration templates
+# type_hint defines the form field type in pan-cnc
+variables:
+  - name: serial_number
+    description: Device serial number
+    default: 12345
+    type_hint: dropdown
+    source: device_names
+  - name: sdwan_type
+    description: template stack name for sd-wan device
+    default: branch
+    type_hint: dropdown
+    dd_list:
+      - key: hub
+        value: hub
+      - key: branch
+        value: branch
+  - name: sdwan_vr
+    description: virtual router for sd-wan device
+    default: sdwan
+    type_hint: text
+  - name: sdwan_site_name
+    description: site name for for sd-wan device
+    default: site1
+    type_hint: text
+  - name: bgp_enable
+    description: use to enable bgp device configuration for sdwan
+    default: enable
+    help_text: add the bgp values below if enable is selected
+    type_hint: dropdown
+    dd_list:
+      - key: enable
+        value: enable
+      - key: ignore
+        value: ignore
+  - name: bgp_router_id
+    description: bgp unique router id
+    default: 192.6.0.1
+    type_hint: text
+    toggle_hint:
+      source: bgp_enable
+      value: enable
+  - name: bgp_loopback_addr
+    description: bgp unique loopback address
+    default: 192.6.0.1
+    type_hint: text
+    toggle_hint:
+      source: bgp_enable
+      value: enable
+  - name: bgp_as_num
+    description: bgp unique AS number
+    default: 64512
+    type_hint: text
+    toggle_hint:
+      source: bgp_enable
+      value: enable
+  - name: bgp_redist_prefix
+    description: bgp redistribution prefix
+    default: sdwan_routes
+    help_text: only used if sdwan type is hub
+    type_hint: text
+    toggle_hint:
+      source: bgp_enable
+      value: enable
+
+# snippets used for api configuration including xpath and element as file name
+# files will load in the order listed
+snippets:
+  - name: sdwan_plugin_onboard
+    xpath: /config/devices/entry[@name="localhost.localdomain"]/plugins/sd_wan/devices
+    file: sdwan_plugin_onboard.xml
+

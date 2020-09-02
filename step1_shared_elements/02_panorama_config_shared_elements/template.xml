@@ -1,0 +1,48 @@
+<entry name="{{ sdwan_shared_template }}">
+  <description>topology or site type recommended template elements</description>
+  <settings>
+    <default-vsys>vsys1</default-vsys>
+  </settings>
+  <config>
+    <devices>
+      <entry name="localhost.localdomain">
+        <vsys>
+          <entry name="vsys1">
+            <zone>
+              <entry name="zone-to-branch">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="zone-to-hub">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="zone-internal">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="zone-internet">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="wan">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="lan">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+            </zone>
+          </entry>
+        </vsys>
+      </entry>
+    </devices>
+  </config>
+</entry>

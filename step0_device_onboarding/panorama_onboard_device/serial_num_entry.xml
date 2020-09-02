@@ -1,0 +1,3 @@
+{% for item in serial_number %}
+<entry name="{{ item }}"/>
+{% endfor %}

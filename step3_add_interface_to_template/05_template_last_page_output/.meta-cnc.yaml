@@ -1,0 +1,61 @@
+name: add_interface_last_page_97b5e00a-7d8e-4203-b5ec-3d3c6a11244a
+label: show interface config workflow info
+description: quick output page that add intf workflow is complete
+
+type: template
+
+extends:
+
+labels:
+  collection:
+    - lib
+
+variables:
+  - name: sdwan_template
+    description: template name for sd-wan
+    default: SD-WAN_Hub
+    type_hint: hidden
+  - name: phy_interface
+    description: physical interface to add to the template
+    default: ethernet1/1
+    type_hint: hidden
+  - name: interface_type
+    description: set inteface type; static will use panorama template variables
+    default: static
+    type_hint: hidden
+  - name: phy_interface_description
+    description: physical interface description
+    default: link to internet
+    type_hint: hidden
+  - name: interface_ip_var_name
+    description: panorama variable name for the added static interface
+    default: $ethernet_11_addr
+    type_hint: hidden
+  - name: next_hop_var_name
+    description: panorama variable name for the added static interface
+    default: $ethernet_11_nexthop
+    type_hint: hidden
+  - name: zone_name
+    description: zone assignment for new interface
+    default: zone-internet
+    type_hint: hidden
+  - name: virtual_router
+    description: virtual_router assignment for new interface
+    default: default
+    type_hint: hidden
+  - name: sdwan_intf_num
+    description: suffix number used for the sdwawn interface
+    default: 1
+    type_hint: hidden
+  - name: sdwan_intf_profile
+    description: sdwan virtual interface traffic profile
+    default: Ethernet
+    type_hint: hidden
+  - name: sdwan_gateway_var_name
+    description: panorama variable name for the sdwan gateway
+    default: $ethernet_11_sdwan_gateway
+    type_hint: hidden
+
+snippets:
+  - name: workflow_output
+    file: workflow_output.txt

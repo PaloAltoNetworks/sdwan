@@ -1,0 +1,12 @@
+<entry name="Low Cost Paths">
+  <color>color3</color>
+  <comments>Group two low cost broadband links and a backup link for general access to the internet.</comments>
+</entry>
+<entry name="Expensive Paths">
+  <color>color1</color>
+  <comments>highest cost paths across the network</comments>
+</entry>
+<entry name="General Access">
+  <color>color8</color>
+  <comments>general data flow</comments>
+</entry>

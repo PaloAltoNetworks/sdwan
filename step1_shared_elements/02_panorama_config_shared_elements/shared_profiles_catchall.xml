@@ -1,0 +1,27 @@
+<sdwan-traffic-distribution>
+  <entry name="catch-all">
+    <link-tags>
+      <entry name="Low Cost Paths"/>
+      <entry name="General Access"/>
+    </link-tags>
+    <traffic-distribution>Top Down Priority</traffic-distribution>
+  </entry>
+</sdwan-traffic-distribution>
+<sdwan-path-quality>
+<entry name="catch-all">
+  <metric>
+    <latency>
+      <threshold>2000</threshold>
+      <sensitivity>medium</sensitivity>
+    </latency>
+    <jitter>
+      <threshold>1000</threshold>
+      <sensitivity>medium</sensitivity>
+    </jitter>
+    <pkt-loss>
+      <threshold>99</threshold>
+      <sensitivity>medium</sensitivity>
+    </pkt-loss>
+  </metric>
+</entry>
+</sdwan-path-quality>

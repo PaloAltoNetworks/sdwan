@@ -1,0 +1,23 @@
+<ethernet>
+  <entry name="{{ phy_interface }}">
+    <comment>{{ phy_interface_description }}</comment>
+    <layer3>
+      <ndp-proxy>
+        <enabled>no</enabled>
+      </ndp-proxy>
+      {%- if interface_type == "dhcp-client" %}
+        <dhcp-client>
+          <create-default-route>no</create-default-route>
+        </dhcp-client>
+      {%- elif interface_type == "static" %}
+        <ip>
+          <entry name="{{ interface_ip_var_name }}"/>
+        </ip>
+      {%- endif %}
+      <lldp>
+        <enable>no</enable>
+      </lldp>
+    </layer3>
+  </entry>
+</ethernet>
+

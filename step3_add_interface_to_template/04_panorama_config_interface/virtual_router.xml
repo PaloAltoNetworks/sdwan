@@ -1,0 +1,28 @@
+<entry name="{{ virtual_router }}">
+  <interface>
+    <member>{{ phy_interface }}</member>
+    <member>sdwan.{{ sdwan_intf_num }}</member>
+  </interface>
+  <routing-table>
+    <ip>
+      <static-route>
+        <entry name="sdwan">
+          <path-monitor>
+            <enable>no</enable>
+            <failure-condition>any</failure-condition>
+            <hold-time>2</hold-time>
+          </path-monitor>
+          <bfd>
+            <profile>None</profile>
+          </bfd>
+          <interface>sdwan.{{ sdwan_intf_num }}</interface>
+          <metric>100</metric>
+          <destination>0.0.0.0/0</destination>
+          <route-table>
+            <unicast/>
+          </route-table>
+        </entry>
+      </static-route>
+    </ip>
+  </routing-table>
+</entry>

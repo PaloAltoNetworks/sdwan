@@ -1,0 +1,25 @@
+# stage 1 base configuration for SD-WAN in Panorama
+
+name: panorama_onboard_device_eccc13ae-d711-4dbf-af19-0c10d26e3699
+
+label: Step 0 - Onboard devices to Panorama
+description: |
+    Onboard individual devices for licensing and staging
+
+type: panorama
+
+labels:
+  collection:
+    - SD-WAN
+
+variables:
+  - name: serial_number
+    description: Device serial number
+    default: 12345
+    type_hint: list
+    help_text: basic onboarding to panorama; click + to add additional devices
+
+snippets:
+  - name: add_device
+    xpath: /config/mgt-config/devices
+    file: serial_num_entry.xml

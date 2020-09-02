@@ -1,0 +1,5 @@
+<entry name="{{ interface_ip_var_name }}">
+  <type>
+    <ip-netmask>None</ip-netmask>
+  </type>
+</entry>

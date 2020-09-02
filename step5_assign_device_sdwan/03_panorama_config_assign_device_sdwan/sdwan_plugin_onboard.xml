@@ -1,0 +1,17 @@
+<entry name="{{ serial_number }}">
+  {%- if bgp_enable == 'enable' %}
+  <bgp>
+    {%- if sdwan_type == 'hub' %}
+    <prefix-redistribute>
+      <entry name="{{ bgp_redist_prefix }}" />
+    </prefix-redistribute>
+    {% endif %}
+    <router-id>{{ bgp_router_id }}</router-id>
+    <loopback-address>{{ bgp_loopback_addr }}</loopback-address>
+    <as-number>{{ bgp_as_num }}</as-number>
+  </bgp>
+  {% endif %}
+  <type>{{ sdwan_type }}</type>
+  <vr-name>{{ sdwan_vr }}</vr-name>
+  <site>{{ sdwan_site_name }}</site>
+</entry>

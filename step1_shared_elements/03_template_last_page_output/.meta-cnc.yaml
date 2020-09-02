@@ -1,0 +1,21 @@
+name: initial_config_last_page_97b5e00a-7d8e-4203-b5ec-3d3c6a11244a
+label: initial configuration workflow last page output
+description: quick output page that workflow is complete
+
+type: template
+
+extends:
+
+labels:
+  collection:
+    - lib
+
+variables:
+  - name: sdwan_shared_template
+    description: template name for sd-wan hub sites
+    default: sdwan_shared_template
+    type_hint: hidden
+
+snippets:
+  - name: workflow_output
+    file: workflow_output.txt

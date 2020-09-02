@@ -1,0 +1,26 @@
+<entry name="{{ virtual_router }}">
+  <ecmp>
+    <algorithm>
+      <ip-modulo/>
+    </algorithm>
+  </ecmp>
+  <protocol>
+    <bgp>
+      <routing-options>
+        <graceful-restart>
+          <enable>yes</enable>
+        </graceful-restart>
+      </routing-options>
+      <enable>no</enable>
+    </bgp>
+    <rip>
+      <enable>no</enable>
+    </rip>
+    <ospf>
+      <enable>no</enable>
+    </ospf>
+    <ospfv3>
+      <enable>no</enable>
+    </ospfv3>
+  </protocol>
+</entry>

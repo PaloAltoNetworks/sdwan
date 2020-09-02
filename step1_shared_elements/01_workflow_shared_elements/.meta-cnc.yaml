@@ -1,0 +1,21 @@
+# workflow demo that cleans the config, does a content update, then configures a basic internet gateway
+
+name: sdwan_new_panorama_v90_0a9ee486-0242-4bb3-a39d-ed7be1d4adda
+label: Step 1 - load shared configuration elements
+description: |
+  this workflow steps through setting up panorama with sdwan shared elements and templates
+
+type: workflow
+
+labels:
+    collection:
+      - SD-WAN
+
+variables:
+
+snippets:
+# workflow stages for initial panorama setup
+# shared elements
+  - name: sdwan_panorama_stage1_shared_dg_97b5e00a-7d8e-4203-b5ec-3d3c6a11244a
+# quick and dirty output to show completion
+  - name: initial_config_last_page_97b5e00a-7d8e-4203-b5ec-3d3c6a11244a

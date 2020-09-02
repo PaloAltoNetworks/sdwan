@@ -1,0 +1,5 @@
+Onboard device to Panorama workflow is complete
+
+Device {{ serial_number }} has been added as type {{ sdwan_type }}
+
+After devices are onboarding for sdwan then can be added to the vpn cluster

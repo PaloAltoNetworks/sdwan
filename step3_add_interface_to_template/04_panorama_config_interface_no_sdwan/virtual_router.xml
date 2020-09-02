@@ -1,0 +1,5 @@
+<entry name="{{ virtual_router }}">
+  <interface>
+    <member>{{ phy_interface }}</member>
+  </interface>
+</entry>
