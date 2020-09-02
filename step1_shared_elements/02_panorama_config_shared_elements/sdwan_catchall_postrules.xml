@@ -1,0 +1,31 @@
+<entry name="SD-WAN catch-all">
+  <target>
+    <negate>no</negate>
+  </target>
+  <action>
+    <traffic-distribution-profile>catch-all</traffic-distribution-profile>
+  </action>
+  <from>
+    <member>any</member>
+  </from>
+  <to>
+    <member>any</member>
+  </to>
+  <source>
+    <member>any</member>
+  </source>
+  <destination>
+    <member>any</member>
+  </destination>
+  <source-user>
+    <member>any</member>
+  </source-user>
+  <application>
+    <member>any</member>
+  </application>
+  <service>
+    <member>any</member>
+  </service>
+  <path-quality-profile>catch-all</path-quality-profile>
+  <description>policy rule to Distribute Unmatched SD-WAN Sessions so that you can control which links any unmatched sessions use and view unmatched SD-WAN application sessions in logging and reports in the SD-WAN plugin.</description>
+</entry>

@@ -1,0 +1,7 @@
+<entry name="{{ zone_name }}">
+  <network>
+    <layer3>
+      <member>{{ phy_interface }}</member>
+    </layer3>
+  </network>
+</entry>

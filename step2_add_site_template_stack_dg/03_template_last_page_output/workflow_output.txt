@@ -1,0 +1,16 @@
+Panorama add a site configuration workflow is complete
+
+The following elements have been added to Panorama:
+
+Template: {{ sdwan_template }}
+{{ sdwan_template_desc }}
+
+Stack: {{ sdwan_stack }}
+{{ sdwan_stack_desc }}
+
+Device-Group: {{ sdwan_dg }}
+
+using virtual router: {{ virtual_router }}
+
+
+The next step is to add interfaces to the template mapped to a specific topology

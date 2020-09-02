@@ -1,0 +1,17 @@
+<ethernet>
+  <entry name="{{ phy_interface }}">
+    <layer3>
+    {%- if interface_type == "static" %}
+      <ip>
+        <entry name="{{ interface_ip_var_name }}">
+          <sdwan-gateway>{{ next_hop_var_name }}</sdwan-gateway>
+        </entry>
+      </ip>
+    {%- endif %}
+      <sdwan-link-settings>
+        <enable>yes</enable>
+        <sdwan-interface-profile>{{ sdwan_intf_profile }}</sdwan-interface-profile>
+      </sdwan-link-settings>
+    </layer3>
+  </entry>
+</ethernet>

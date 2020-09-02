@@ -1,0 +1,30 @@
+<entry name="sample_rule">
+  <target>
+    <negate>no</negate>
+  </target>
+  <action>
+    <traffic-distribution-profile>least expensive link first</traffic-distribution-profile>
+  </action>
+  <from>
+    <member>any</member>
+  </from>
+  <to>
+    <member>any</member>
+  </to>
+  <source>
+    <member>any</member>
+  </source>
+  <destination>
+    <member>any</member>
+  </destination>
+  <source-user>
+    <member>any</member>
+  </source-user>
+  <application>
+    <member>any</member>
+  </application>
+  <service>
+    <member>any</member>
+  </service>
+  <path-quality-profile>photo-video</path-quality-profile>
+</entry>

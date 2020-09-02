@@ -1,0 +1,9 @@
+<sdwan>
+  <units>
+    <entry name="sdwan.{{ sdwan_intf_num }}">
+      <interface>
+        <member>{{ phy_interface }}</member>
+      </interface>
+    </entry>
+  </units>
+</sdwan>

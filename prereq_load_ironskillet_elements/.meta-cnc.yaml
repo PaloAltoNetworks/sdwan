@@ -1,0 +1,21 @@
+# workflow demo that cleans the config, does a content update, then configures a basic internet gateway
+
+name: load_iron_skillet_shared_dgtemplate_0a9ee486-0242-4bb3-a39d-ed7be1d4adda
+label: Prerequisite - Load IronSkillet shared elements to Panorama
+description: |
+  this will load the IronSkillet shared device-group and template elements to Panorama. ***IronSkillet repo must
+  be imported with the branch set to panos_v9.1***. When a new template is created
+  the user can include the IronSkillet template as part of the new template stack. Ensure system has access to the
+  associated IronSkillet repo
+
+type: workflow
+
+labels:
+    collection:
+      - SD-WAN
+
+variables:
+
+snippets:
+# workflow mapping to IronSkillet collection for shared Panorama elements
+  - name: skillet_panorama_dgtemplate_shared_v91_963e7638-7314-4a20-b25e-fa7a40703f58

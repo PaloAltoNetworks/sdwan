@@ -1,0 +1,3 @@
+# ignore editor directories
+.vscode/
+.idea/

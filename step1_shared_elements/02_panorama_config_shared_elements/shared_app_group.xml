@@ -1,0 +1,5 @@
+<entry name="sdwan_base">
+  <members>
+    <member>bgp</member>
+  </members>
+</entry>

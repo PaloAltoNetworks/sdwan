@@ -1,0 +1,32 @@
+# device onboarding
+name: panorama_onboard_device_add_var_eccc13ae-d711-4dbf-af19-0c10d26e3627
+
+label: Add variable values to device
+description: |
+    add variable values for phy interface ip and sdwan gateway
+
+type: panorama
+
+labels:
+  collection:
+    - lib
+
+variables:
+  - name: serial_number
+    description: Device serial number
+    default: 12345
+    type_hint: disabled
+  - name: sdwan_device_stack
+    description: template stack name for sd-wan device
+    default: SD-WAN_stack
+    type_hint: disabled
+  - name: template_variables
+    description: variable value for
+    default: var value
+    type_hint: text
+    source: variable_names
+
+snippets:
+  - name: device_to_stack
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template-stack/entry[@name='{{ sdwan_device_stack }}']/devices
+    file: stack_with_var.xml

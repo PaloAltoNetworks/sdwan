@@ -1,0 +1,30 @@
+<entry name="ADSL">
+  <link-tag>General Access</link-tag>
+  <comment>ADSL link</comment>
+  <link-type>ADSL/DSL</link-type>
+  <maximum-download>500</maximum-download>
+  <maximum-upload>50</maximum-upload>
+  <path-monitoring>Aggressive</path-monitoring>
+  <probe-frequency>5</probe-frequency>
+  <failback-hold-time>120</failback-hold-time>
+</entry>
+<entry name="Ethernet">
+  <link-tag>Low Cost Paths</link-tag>
+  <comment>GE service</comment>
+  <link-type>Ethernet</link-type>
+  <maximum-download>1000</maximum-download>
+  <maximum-upload>1000</maximum-upload>
+  <path-monitoring>Aggressive</path-monitoring>
+  <probe-frequency>5</probe-frequency>
+  <failback-hold-time>120</failback-hold-time>
+</entry>
+<entry name="LTE">
+  <link-tag>Expensive Paths</link-tag>
+  <comment>LTE mobile service</comment>
+  <link-type>LTE/3G/4G/5G</link-type>
+  <maximum-download>250</maximum-download>
+  <maximum-upload>100</maximum-upload>
+  <path-monitoring>Relaxed</path-monitoring>
+  <probe-frequency>5</probe-frequency>
+  <failback-hold-time>120</failback-hold-time>
+</entry>

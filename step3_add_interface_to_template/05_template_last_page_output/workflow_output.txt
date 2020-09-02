@@ -1,0 +1,21 @@
+Panorama add a interface configuration workflow is complete
+
+The following elements have been added to Panorama:
+
+interface {{ phy_interface }} added to template {{ sdwan_template }}
+
+phy interface type: {{ interface_type }}
+added to zone: {{ zone_name }}
+added to virtual router: {{ virtual_router }}
+
+{%- if interface_type == 'static' %}
+variables if static interface configured
+phy ip address: {{ interface_ip_var_name }}
+next-hop gateway: {{ next_hop_var_name }}
+{% endif %}
+
+sdwan interface: sdwan.{{ sdwan_intf_num }}
+interface traffic profile: {{ sdwan_intf_profile }}
+
+
+Add additional interfaces as required to finalize the template topology

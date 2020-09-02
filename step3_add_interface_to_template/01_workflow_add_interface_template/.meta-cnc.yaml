@@ -1,0 +1,55 @@
+# demo workflow for device uplink values
+
+name: sdwan_add_template_interface_0a9ee486-0242-4bb3-a39d-ed7be1d4adda
+
+label: Step 3 -  add interface to new template
+description: |
+  add individual interfaces to the sdwan template based on topology requirements
+
+type: workflow
+
+labels:
+  collection:
+    - SD-WAN
+
+variables:
+  - name: TARGET_IP
+    description: Panorama IP
+    default: 0.0.0.0
+    type_hint: fqdn_or_ip
+  - name: TARGET_PORT
+    description: Panorama port
+    default: 443
+    type_hint: number
+  - name: TARGET_USERNAME
+    description: Username
+    default: admin
+    type_hint: text
+  - name: TARGET_PASSWORD
+    description: Password
+    default: admin
+    type_hint: password
+  - name: add_sdwan
+    description: include SD-WAN elements for this interface
+    default: 'yes'
+    type_hint: dropdown
+    dd_list:
+      - key: 'yes'
+        value: 'yes'
+      - key: 'no'
+        value: 'no'
+
+snippets:
+# workflow stages
+# get template list to pass to other get list skillet
+  - name: get_template_lists_97b5e00a-7d8e-4203-b5ec-3d3c6a11244a
+# get zone, virt router, and profile lists
+  - name: get_interface_lists_97b5e00a-7d8e-4203-b5ec-3d3c6a11244a
+# if interface 1 is static input vars and configure for sdwan phy interface
+  - name: sdwan_panorama_add_intf_to_template_97b5e00a-7d8e-4203-b5ec-3d3c6a11244b
+    when: add_sdwan == 'yes'
+# configuration skillet without sdwan elements
+  - name: sdwan_panorama_add_no_sdwan_intf_to_template_97b5e00a-7d8e-4203-b5ec-3d3c6a11244b
+    when: add_sdwan == 'no'
+# quick and dirty output to show completion
+  - name: add_interface_last_page_97b5e00a-7d8e-4203-b5ec-3d3c6a11244a

@@ -1,0 +1,10 @@
+<sdwan-traffic-distribution>
+  <entry name="least expensive link first">
+    <link-tags>
+      <entry name="Low Cost Paths"/>
+      <entry name="General Access"/>
+      <entry name="Expensive Paths"/>
+    </link-tags>
+    <traffic-distribution>Best Available Path</traffic-distribution>
+  </entry>
+</sdwan-traffic-distribution>

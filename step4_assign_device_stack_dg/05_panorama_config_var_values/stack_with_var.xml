@@ -1,0 +1,11 @@
+<entry name="{{ serial_number }}">
+  <variable>
+    {%- for var_name, var_value in template_variables.items() %}
+    <entry name="{{ var_name }}">
+      <type>
+        <ip-netmask>{{ var_value }}</ip-netmask>
+      </type>
+    </entry>
+    {% endfor %}
+  </variable>
+</entry>

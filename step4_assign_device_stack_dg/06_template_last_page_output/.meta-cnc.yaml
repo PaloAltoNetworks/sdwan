@@ -1,0 +1,29 @@
+name: add_interface_last_page_eccc13ae-d711-4dbf-af19-0c10d26e3627
+label: show interface config workflow info
+description: quick output page that add intf workflow is complete
+
+type: template
+
+extends:
+
+labels:
+  collection:
+    - lib
+
+variables:
+  - name: serial_number
+    description: Device serial number
+    default: 12345
+    type_hint: hidden
+  - name: sdwan_device_stack
+    description: template stack name for sd-wan device
+    default: SD-WAN_stack
+    type_hint: hidden
+  - name: sdwan_device_dg
+    description: device group for sd-wan device
+    default: SD-WAN_device_group
+    type_hint: hidden
+
+snippets:
+  - name: workflow_output
+    file: workflow_output.txt

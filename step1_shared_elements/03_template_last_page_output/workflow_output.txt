@@ -1,0 +1,13 @@
+Panorama initial configuration workflow is complete
+
+reference template {{ sdwan_shared_template }} has been added to Panorama
+along with device-group shared objects:
+
+* link tags
+* catch-all profiles and post-rule
+* a shared application group
+* traffic distribution profile
+* predefined zones (zone-to-branch, zone-to-hub, zone-internal, zone-internet)
+* security policy pre-rule allowing application bgp between sites
+
+The next step is to run the workflow to add a new hub or branch site
