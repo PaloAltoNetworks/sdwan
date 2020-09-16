@@ -1,4 +1,4 @@
-### SD-WAN Configuration Skillets
+# SD-WAN Configuration Skillets
 
 This is a set of modular skillets for Panorama and the SD-WAN plugin
 
