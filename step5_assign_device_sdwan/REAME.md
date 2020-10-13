@@ -27,6 +27,11 @@ Devices are added to SD-WAN including
 * virtual router name
 * BGP router-id, loopback address, AS and route to be redistributed
 
+## Add SD-WAN Address Pool
+
+SD-WAN Address Pool is created in Panorama
+
+* Add up to 20 IP address ranges (IP network with netmask) that Panorama draws from to use as VPN tunnel IP addresses
 
 ## Workflow Complete Summary Output
 
