@@ -17,7 +17,7 @@ snippets:
 # workflow stages for initial panorama setup
 # shared elements
   - name: sdwan_panorama_stage1_shared_dg_97b5e00a-7d8e-4203-b5ec-3d3c6a11244a
-# add sd-wan pool
+# add sd-wan vpn address pool
   - name: panorama_sdwan_vpn_pool_eccc13ae-d711-4dbf-af19-0c10d26e3699  
 # quick and dirty output to show completion
   - name: initial_config_last_page_97b5e00a-7d8e-4203-b5ec-3d3c6a11244a

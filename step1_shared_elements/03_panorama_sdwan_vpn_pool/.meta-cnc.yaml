@@ -13,9 +13,9 @@ labels:
 variables:
   - name: member_pool
     description: SD-WAN VPN Pool
-    default: 192.0.1.0/24
+    default: 192.168.1.0/24
     type_hint: list
-    help_text: Add up to 20 IP address ranges (IP network with netmask) that Panorama draws from to use as VPN tunnel IP addresses.
+    help_text: Add up to 20 IP address ranges (IP network with netmask) that Panorama draws from to use as VPN tunnel IP addresses. Panorama draws from the largest range first, then from the next largest range. A VPN cluster member will get its IP address from the VPN address pool (the ranges) you provide. You must configure at least one entry.
 
 snippets:
   - name: add_member_pool
