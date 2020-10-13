@@ -2,9 +2,9 @@
 
 name: panorama_sdwan_vpn_pool_eccc13ae-d711-4dbf-af19-0c10d26e3699
 
-label: Step 4 - Create SD-WAN VPN Pool in Panorama
+label: create SD-WAN VPN Address Pool in SD-WAN Plugin
 description: |
-    Create SD-WAN pool in Panorama
+    Create SD-WAN VPN Address pool in Panorama
 
 type: panorama
 
