@@ -10,10 +10,8 @@ along with device-group shared objects:
 * predefined zones (zone-to-branch, zone-to-hub, zone-internal, zone-internet)
 * security policy pre-rule allowing application bgp between sites
 
-Added the 
-      {%- for item in member_pool %}
+Added the {%- for item in member_pool %}
         {{ item }}
-      {%- endfor %}
- subnet to SD-WAN VPN address pool
+      {%- endfor %} subnet to SD-WAN VPN address pool
 
 The next step is to run the workflow to add a new hub or branch site
