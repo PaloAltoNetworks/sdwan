@@ -2,9 +2,4 @@ Onboard device to Panorama workflow is complete
 
 Device {{ serial_number }} has been added as type {{ sdwan_type }}
 
-Added the following subnest to SD-WAN member pool
-{%- for item in member_pool %}
-        {{ item }}
-      {%- endfor %}
-
 After devices are onboarding for sdwan then can be added to the vpn cluster

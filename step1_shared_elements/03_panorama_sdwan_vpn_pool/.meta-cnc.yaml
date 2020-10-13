@@ -1,5 +1,3 @@
-# stage 1 base configuration for SD-WAN in Panorama
-
 name: panorama_sdwan_vpn_pool_eccc13ae-d711-4dbf-af19-0c10d26e3699
 
 label: create SD-WAN VPN Address Pool in SD-WAN Plugin
