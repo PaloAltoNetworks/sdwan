@@ -10,7 +10,7 @@ type: panorama
 
 labels:
   collection:
-    - SD-WAN
+    - lib
 
 variables:
   - name: member_pool
