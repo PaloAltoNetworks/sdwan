@@ -40,6 +40,7 @@ Add the following shared elements to Panorama:
 * application pre-rule for bgp traffic including an sdwan logging profile
 * recommended traffic distribution profiles
 * reference interface profiles and template
+* SD-WAN VPN Address Pool
 
 ### Step 2 - Add New Site
 
