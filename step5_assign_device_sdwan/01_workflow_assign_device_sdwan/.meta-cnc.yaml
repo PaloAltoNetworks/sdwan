@@ -35,6 +35,8 @@ snippets:
   - name: get_device_list_eccc13ae-d711-4dbf-af19-0c10d26e3627
 # initial dg and stack assignment with interface types
   - name: panorama_onboard_device_sdwan_eccc13ae-d711-4dbf-af19-0c10d26e3633
+# add sd-wan pool
+  - name: panorama_sdwan_vpn_pool_eccc13ae-d711-4dbf-af19-0c10d26e3699
 # last page output review
   - name: onboard_sdwan_last_page_eccc13ae-d711-4dbf-af19-0c10d26e3633
 
