@@ -1,5 +1,7 @@
 # SD-WAN Configuration Skillets
 
+## Tested with Panorama 10.0.1, SD-WAN plugin 1.0.4, and  PAN-OS 10.0.1
+
 This is a set of modular skillets for Panorama and the SD-WAN plugin
 
 The set of skillets do not provide a panorama day 1, upgrade software, 
