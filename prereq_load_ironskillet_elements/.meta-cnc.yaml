@@ -18,4 +18,4 @@ variables:
 
 snippets:
 # workflow mapping to IronSkillet collection for shared Panorama elements
-  - name: skillet_panorama_dgtemplate_shared_v91_963e7638-7314-4a20-b25e-fa7a40703f58
+  - name: skillet_panorama_v10_0
