@@ -76,6 +76,15 @@ Step 2 'Add a New Site' template configuration
 * zones to be used for physical interface associations: wan, lan
 * interface profiles for Ethernet, ADSL, and LTE
 
+
+## SD-WAN VPN Address Pool
+
+Add up to 20 IP address ranges (IP network with netmask) that Panorama draws from to use as VPN tunnel IP addresses.
+
+Panorama draws from the largest range first, then from the next largest range. A VPN cluster member will get its IP address from the VPN address pool (the ranges) you provide.
+
+You must configure at least one entry.
+
 ## Workflow Complete Summary Output
 
 This is a simple text render to screen to show the user a configuration

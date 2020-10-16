@@ -22,4 +22,7 @@ variables:
 snippets:
   - name: add_device
     xpath: /config/mgt-config/devices
-    file: serial_num_entry.xml
+    element: |-
+      {% for item in serial_number %}
+        <entry name="{{ item }}"/>
+      {% endfor %}

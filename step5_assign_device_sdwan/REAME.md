@@ -27,7 +27,6 @@ Devices are added to SD-WAN including
 * virtual router name
 * BGP router-id, loopback address, AS and route to be redistributed
 
-
 ## Workflow Complete Summary Output
 
 This is a simple text render to screen to show the user a configuration

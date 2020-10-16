@@ -1,0 +1,26 @@
+name: panorama_sdwan_vpn_pool_eccc13ae-d711-4dbf-af19-0c10d26e3699
+
+label: create SD-WAN VPN Address Pool in SD-WAN Plugin
+description: |
+    Create SD-WAN VPN Address pool in Panorama
+
+type: panorama
+
+labels:
+  collection:
+    - lib
+
+variables:
+  - name: member_pool
+    description: SD-WAN VPN Address Pool
+    default: 192.168.1.0/24
+    type_hint: list
+    help_text: Add up to 20 IP address ranges (IP network with netmask) that Panorama draws from to use as VPN tunnel IP addresses. Panorama draws from the largest range first, then from the next largest range. A VPN cluster member will get its IP address from the VPN address pool (the ranges) you provide. You must configure at least one entry.
+
+snippets:
+  - name: add_member_pool
+    xpath: /config/devices/entry[@name='localhost.localdomain']/plugins/sd_wan/vpn-address-pool
+    element: |-
+      {% for item in member_pool %}
+        <member>{{ item }}</member>
+      {% endfor %}

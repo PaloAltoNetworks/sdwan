@@ -15,6 +15,10 @@ variables:
     description: template name for sd-wan hub sites
     default: sdwan_shared_template
     type_hint: hidden
+  - name: member_pool
+    description: SD-WAN VPN Address Pool
+    default: 192.168.1.0/24
+    type_hint: hidden
 
 snippets:
   - name: workflow_output
