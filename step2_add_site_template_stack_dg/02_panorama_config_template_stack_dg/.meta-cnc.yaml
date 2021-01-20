@@ -41,6 +41,10 @@ variables:
     description: device group description
     default: HUB-West-device-group
     type_hint: text
+  - name: add_zones
+    description: add zones to be used in security policy
+    default: Internal
+    type_hint: list  
   - name: virtual_router
     description: virtual router name to associate interfaces
     default: sdwan
