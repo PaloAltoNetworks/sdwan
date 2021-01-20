@@ -72,7 +72,7 @@ It includes the following configuration elements also used by the
 Step 2 'Add a New Site' template configuration
 
 * predefined zones for SD-WAN: zone-to-branch, zone-to-hub, zone-internal
-* zones to be used for physical interface associations: wan, lan
+* zones to be used for security policy
 * interface profiles for Ethernet, ADSL, and LTE
 
 ## Workflow Complete Summary Output

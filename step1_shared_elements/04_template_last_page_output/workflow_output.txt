@@ -8,6 +8,7 @@ along with device-group shared objects:
 * a shared application group
 * traffic distribution profile
 * predefined zones (zone-to-branch, zone-to-hub, zone-internal)
+* zones defined for security policy
 * security policy pre-rule allowing application bgp between sites
 
 Added the {%- for item in member_pool %} {{ item }} {%- endfor %} subnet to SD-WAN VPN address pool

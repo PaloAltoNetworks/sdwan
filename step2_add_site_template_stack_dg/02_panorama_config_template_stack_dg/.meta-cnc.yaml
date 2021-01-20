@@ -19,27 +19,27 @@ labels:
 variables:
   - name: sdwan_template
     description: template name for sd-wan site
-    default: Hub-WEST-Template
+    default: Hub-Template
     type_hint: text
   - name: sdwan_template_desc
     description: template description
-    default: Hub-WEST-template
+    default: Hub-template
     type_hint: text
   - name: sdwan_stack
     description: template stack name for sd-wan site
-    default: HUB-West-stack
+    default: HUB-stack
     type_hint: text
   - name: sdwan_stack_desc
     description: template stack description
-    default: hub site east
+    default: hub site
     type_hint: text
   - name: sdwan_dg
     description: device group name for sd-wan site
-    default: HUB-West-device-group
+    default: HUB-device-group
     type_hint: text
   - name: sdwan_dg_desc
     description: device group description
-    default: HUB-West-device-group
+    default: HUB-device-group
     type_hint: text
   - name: add_zones
     description: add zones to be used in security policy
