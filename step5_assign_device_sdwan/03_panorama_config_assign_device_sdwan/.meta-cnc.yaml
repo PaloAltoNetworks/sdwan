@@ -73,7 +73,7 @@ variables:
   - name: bgp_redist_prefix
     description: bgp redistribution prefix
     default: sdwan_routes
-    help_text: routes to add to bgp fore redistribution
+    help_text: routes to add to bgp for redistribution
     type_hint: text
     toggle_hint:
       source: bgp_enable
