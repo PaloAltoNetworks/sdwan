@@ -70,13 +70,23 @@ variables:
     toggle_hint:
       source: bgp_enable
       value: enable
+  - name: bgp_redist_enable
+    description: use to enable bgp redistribution
+    default: enable
+    help_text: add the route values below if enable is selected
+    type_hint: dropdown
+    dd_list:
+      - key: enable
+        value: enable
+      - key: ignore
+        value: ignore
   - name: bgp_redist_prefix
     description: bgp redistribution prefix
     default: sdwan_routes
     help_text: routes to add to bgp for redistribution
     type_hint: text
     toggle_hint:
-      source: bgp_enable
+      source: bgp_redist_enable
       value: enable
 
 # snippets used for api configuration including xpath and element as file name
