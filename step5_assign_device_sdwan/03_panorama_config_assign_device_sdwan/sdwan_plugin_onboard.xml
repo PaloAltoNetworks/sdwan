@@ -1,7 +1,7 @@
 <entry name="{{ serial_number }}">
   {%- if bgp_enable == 'enable' %}
   <bgp>
-    {%- if bgp_redist_prefix == 'enable' %}
+    {%- if bgp_redist_enable == 'enable' %}
     <prefix-redistribute>
       <entry name="{{ bgp_redist_prefix }}" />
     </prefix-redistribute>
