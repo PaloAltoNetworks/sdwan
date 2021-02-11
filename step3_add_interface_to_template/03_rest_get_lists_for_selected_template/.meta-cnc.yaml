@@ -32,6 +32,10 @@ variables:
     default: Hub-WEST-Template
     type_hint: dropdown
     source: template_names
+  - name: reserved_zones
+    description: zones required for SD-WAN
+    default: ['zone-internal','zone-to-hub','zone-to-branch']
+    type_hint: hidden
 
 snippets:
   - name: key_gen
@@ -50,7 +54,8 @@ snippets:
     output_type: xml
     outputs:
       - name: zone_names
-        capture_pattern: ./completions/completion//@value
+        capture_list: ./completions/completion//@value
+        filter_items: item not in reserved_zones
 
 # get virtual routers
   - name: virtual_router_list

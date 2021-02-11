@@ -24,21 +24,13 @@
                   <layer3/>
                 </network>
               </entry>
-              <entry name="zone-internet">
+              {%- for zone in add_zones %}
+              <entry name="{{ zone }}">
                 <network>
                   <layer3/>
                 </network>
               </entry>
-              <entry name="wan">
-                <network>
-                  <layer3/>
-                </network>
-              </entry>
-              <entry name="lan">
-                <network>
-                  <layer3/>
-                </network>
-              </entry>
+              {%- endfor %}
             </zone>
           </entry>
         </vsys>

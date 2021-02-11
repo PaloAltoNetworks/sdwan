@@ -24,6 +24,10 @@ variables:
     default: sdwan_reference_template
     type_hint: text
     help_text: this is an unused clonable template with shared attributes for reference
+  - name: add_zones
+    description: add zones to be used in security policy
+    default: Internal
+    type_hint: list
 
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
@@ -52,7 +56,4 @@ snippets:
   - name: sdwan_catchall_postrules
     xpath: /config/shared/post-rulebase/sdwan/rules
     file: sdwan_catchall_postrules.xml
-  - name: app_bgp_security_prerules
-    xpath: /config/shared/pre-rulebase/security/rules
-    file: app_bgp_security_prerules.xml
 

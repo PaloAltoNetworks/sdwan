@@ -1,6 +1,6 @@
 # SD-WAN Configuration Skillets
 
-## Tested with Panorama 10.0.1, SD-WAN plugin 1.0.4, and  PAN-OS 10.0.1
+## Tested with Panorama 10.0.3, SD-WAN plugin 2.0.2, and  PAN-OS 10.0.3
 
 This is a set of modular skillets for Panorama and the SD-WAN plugin
 
@@ -62,7 +62,7 @@ to become topology specific based on interface requirements.
 NOTE: add new templates as required to match topology variation such as
 number of interfaces and interface types.
 
-### Step 4 - Add Interface to Template
+### Step 3 - Add Interface to Template
 
 The previous step creates a site template foundation and this step then adds
 each required interface based on the topology.
@@ -86,7 +86,6 @@ Configuration elements in this step include:
 * enable SD-WAN on the phy interface
 * assign an SD-WAN interface profile to the phy interface
 * zone and virtual-router assignment for the interface
-* add an SD-WAN interface
 * create panorama variables for static interface ip address and gateway
 
 This is step is repeated for each interface to be added to the site template.
