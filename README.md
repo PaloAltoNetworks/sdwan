@@ -1,6 +1,6 @@
 # SD-WAN Configuration Skillets
 
-## Tested with Panorama 10.0.3, SD-WAN plugin 2.0.2, and  PAN-OS 10.0.3
+## Tested with Panorama 10.0.5, SD-WAN plugin 2.0.2, and  PAN-OS 10.0.5
 
 This is a set of modular skillets for Panorama and the SD-WAN plugin
 
@@ -9,6 +9,8 @@ or install and activate the plugin.
 
 Each step uses a workflow skillet model to guide the user, query panorama
 to provide valid configuration options, and give a step summary at the end.
+
+Use sd-wan-skillet-worksheet.txt to have required values available during the skillet.
 
 ### Optional Step to include IronSkillet
 

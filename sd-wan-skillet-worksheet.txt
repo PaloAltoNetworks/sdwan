@@ -1,0 +1,64 @@
+SD-WAN Skillet Worksheet
+
+Step 0
+Device Serial Number
+
+
+Step 1
+name for SD-WAN reference template:
+
+zones for security policiy:
+
+
+Step 2 - Completed for each site
+
+template name for sd-wan site:
+
+template description:
+
+template stack name for sd-wan site:
+
+template stack description:
+
+device group name for sd-wan site:
+
+device group description:
+
+add zones to be used in security policy:
+
+virtual router name to associate interfaces:
+
+choose to include IronSkillet day one as part of the template stack:
+
+
+Step 3 - Complete for each physical interface
+template name for sd-wan:
+
+physical interface to add to the template:
+
+set inteface type; static will use panorama template variables:
+static or dhcp-client
+panorama variable name for the added static interface:
+
+panorama variable name for the next hop gateway:
+
+physical interface description:
+
+
+Step 4 - Match Device Serial Number to template stack and DG
+
+Interface Static IPs (in CIDR format) and Nexthop IP values
+
+
+Step 5
+virtual router for sd-wan device:
+sdwan
+site name for for sd-wan device:
+
+bgp unique router id:
+
+bgp unique loopback address:
+
+bgp unique AS number:
+
+bgp redistribution prefix:
