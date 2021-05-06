@@ -38,7 +38,8 @@ run to see and validate the list returned from Panorama.
 For static interfaces, the user is provided with a list of variables for
 the selected template and values are entered. These values are associated to
 the specific device when onboarded and the configuration is pushed from
-Panorama to the device.
+Panorama to the device. Interface IP Address values must be in CIDR format.
+Next Hop values should be a single IP Address.
 
 The use of variables allows for multiple devices to be associated to the same
 template but with varying interface addresses and next-hop gateways.
