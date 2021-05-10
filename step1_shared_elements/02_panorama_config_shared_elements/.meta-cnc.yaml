@@ -56,4 +56,6 @@ snippets:
   - name: sdwan_catchall_postrules
     xpath: /config/shared/post-rulebase/sdwan/rules
     file: sdwan_catchall_postrules.xml
-
+  - name: app_bgp_security_prerules
+    xpath: /config/shared/pre-rulebase/security/rules
+    file: app_bgp_security_prerules.xml
